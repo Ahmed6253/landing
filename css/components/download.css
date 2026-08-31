@@ -1,0 +1,52 @@
+.download {
+  display: flex;
+  margin: 10.25rem auto;
+  flex-direction: row;
+  gap: 4rem;
+}
+
+.download-info {
+  align-self: center;
+}
+
+.download-btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.download-btn {
+  display: inline-block;
+  transition: transform var(--transition);
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  transform: translateY(-0.125rem);
+}
+
+.download-btn img {
+  height: 3rem;
+  width: auto;
+  display: block;
+}
+
+.download-visual {
+  margin: auto;
+}
+
+.download-phone-img {
+  width: 100%;
+  max-width: 25rem;
+}
+
+@media (max-width: 768px) {
+  .download {
+    flex-direction: column-reverse;
+    gap: 2.5rem;
+  }
+  .download-info {
+    align-self: start;
+  }
+}
