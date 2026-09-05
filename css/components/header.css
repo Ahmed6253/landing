@@ -70,9 +70,9 @@
   transform: translateY(-0.4375rem) rotate(-45deg);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .header {
-    width: 92%;
+    width: 94%;
   }
 
   .header-nav {

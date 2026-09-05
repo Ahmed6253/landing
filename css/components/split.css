@@ -54,7 +54,7 @@
   line-height: 1.5;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .split {
     margin-top: 10.25rem;
   }

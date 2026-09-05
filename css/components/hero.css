@@ -74,7 +74,7 @@
   display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .hero {
     margin: 8.5rem auto 4.5rem;
     height: auto;
