@@ -20,3 +20,10 @@ const card = document.querySelector(".card-container");
 card.addEventListener("click", () => {
   card.classList.toggle("flipped");
 });
+
+//scan QR animation handler
+const downloadVisual = document.querySelector(".download-visual");
+
+downloadVisual.addEventListener("click", () => {
+  downloadVisual.classList.toggle("scan");
+});

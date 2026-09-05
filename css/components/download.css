@@ -36,6 +36,16 @@
 .download-visual {
   position: relative;
   margin: auto;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.download-visual:hover .download-card-front {
+  transform: rotate(5deg) translateY(2rem);
+}
+
+.download-visual.scan:hover .download-card-back {
+  transform: scale(1.05) rotateY(180deg);
 }
 
 .download-phone-img {
@@ -49,19 +59,52 @@
   top: 4rem;
   width: 14rem;
   left: 1.7rem;
+  transition: opacity var(--transition);
+}
+
+.download-layer2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 3.5rem;
+  width: 12rem;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.download-visual.scan .download-layer1 {
+  opacity: 0;
+}
+
+.download-visual.scan .download-layer2 {
+  opacity: 1;
 }
 
 .download-card {
+  transition: transform 0.8s ease;
   position: absolute;
-  top: 12rem;
-  right: 4rem;
+  transform-style: preserve-3d;
+  top: 20rem;
+  right: -3rem;
   width: 22rem;
   transform: rotate(97.86deg);
   z-index: -1;
 }
 
-.download-card-front {
+.download-visual.scan .download-card {
+  transform: rotateY(180deg) translateY(-9.2rem) translateX(0.4rem);
+}
+
+.download-card-front,
+.download-card-back {
+  position: absolute;
   width: 100%;
+  transition: transform 0.8s ease;
+  backface-visibility: hidden;
+}
+
+.download-card-back {
+  transform: rotateY(180deg);
 }
 
 @media (max-width: 800px) {
