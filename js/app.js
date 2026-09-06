@@ -27,3 +27,24 @@ const downloadVisual = document.querySelector(".download");
 downloadVisual.addEventListener("click", () => {
   downloadVisual.classList.toggle("scan");
 });
+
+//theme toggle handler
+const themeBtn = document.getElementById("theme-btn");
+const themeIconLight = document.querySelector(".theme-icon-light");
+const themeIconDark = document.querySelector(".theme-icon-dark");
+const body = document.body;
+let theme = localStorage.getItem("theme") || "dark";
+
+function setTheme() {
+  body.classList.toggle("light", theme === "light");
+  themeIconLight.style.display = theme === "light" ? "none" : "block";
+  themeIconDark.style.display = theme === "light" ? "block" : "none";
+}
+
+themeBtn.addEventListener("click", () => {
+  theme = theme === "light" ? "dark" : "light";
+  localStorage.setItem("theme", theme);
+  setTheme();
+});
+
+setTheme();

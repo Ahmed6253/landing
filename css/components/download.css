@@ -92,6 +92,18 @@
   transition: opacity var(--transition);
 }
 
+body.light .download-layer1.dark {
+  display: none;
+}
+
+.download-layer1.light {
+  display: none;
+}
+
+body.light .download-layer1.light {
+  display: block;
+}
+
 .download-layer2 {
   position: absolute;
   left: 50%;
@@ -100,6 +112,18 @@
   width: 12rem;
   opacity: 0;
   transition: opacity var(--transition);
+}
+
+body.light .download-layer2.dark {
+  display: none;
+}
+
+.download-layer2.light {
+  display: none;
+}
+
+body.light .download-layer2.light {
+  display: block;
 }
 
 .download.scan .download-layer1 {

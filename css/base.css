@@ -18,6 +18,17 @@
   --transition: 0.2s ease;
 }
 
+.light {
+  --color-bg: #fafafa;
+  --color-card: #f4f4f5;
+  --color-border: #e4e4e7;
+  --color-text: #1f2937;
+  --color-text-muted: #6b7280;
+  --color-primary: #1aa086;
+  --color-primary-hover: #2d8c7a;
+  --color-accent: #0a8e6f;
+}
+
 html {
   scroll-behavior: smooth;
 }

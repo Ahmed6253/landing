@@ -15,6 +15,12 @@
   border-radius: var(--radius);
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 .header-logo {
   height: 1.25rem;
 }
@@ -68,6 +74,26 @@
 
 .header-burger.is-active span:nth-child(3) {
   transform: translateY(-0.4375rem) rotate(-45deg);
+}
+
+.theme-btn {
+  background: var(--color-card);
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.theme-btn img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.theme-btn:hover {
+  opacity: 0.8;
+}
+
+.theme-icon-dark {
+  display: none;
 }
 
 @media (max-width: 800px) {
