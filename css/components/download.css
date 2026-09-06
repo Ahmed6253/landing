@@ -10,11 +10,41 @@
   align-self: center;
 }
 
+.download-qr {
+  position: absolute;
+  overflow: hidden;
+  opacity: 0;
+  width: 0;
+  transition:
+    opacity 0.8s ease,
+    width 0.8s ease;
+}
+
+.download-app {
+  position: absolute;
+  overflow: hidden;
+  opacity: 1;
+  width: auto;
+  transition:
+    opacity 0.8s ease,
+    width 0.8s ease;
+}
+
+.download.scan .download-qr {
+  opacity: 1;
+  width: auto;
+}
+
+.download.scan .download-app {
+  opacity: 0;
+  width: 0;
+}
+
 .download-btns {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-top: 1.5rem;
+  margin-top: 5rem;
 }
 
 .download-btn {
@@ -44,7 +74,7 @@
   transform: rotate(5deg) translateY(2rem);
 }
 
-.download-visual.scan:hover .download-card-back {
+.download.scan .download-visual:hover .download-card-back {
   transform: scale(1.05) rotateY(180deg);
 }
 
@@ -72,11 +102,11 @@
   transition: opacity var(--transition);
 }
 
-.download-visual.scan .download-layer1 {
+.download.scan .download-layer1 {
   opacity: 0;
 }
 
-.download-visual.scan .download-layer2 {
+.download.scan .download-layer2 {
   opacity: 1;
 }
 
@@ -91,7 +121,7 @@
   z-index: -1;
 }
 
-.download-visual.scan .download-card {
+.download.scan .download-card {
   transform: rotateY(180deg) translateY(-9.2rem) translateX(0.4rem);
 }
 

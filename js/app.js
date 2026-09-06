@@ -22,7 +22,7 @@ card.addEventListener("click", () => {
 });
 
 //scan QR animation handler
-const downloadVisual = document.querySelector(".download-visual");
+const downloadVisual = document.querySelector(".download");
 
 downloadVisual.addEventListener("click", () => {
   downloadVisual.classList.toggle("scan");
